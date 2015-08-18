@@ -1,0 +1,32 @@
+Вот тестовое задание:
+
+You need to develop the Single Sign-On web page that will show the list of albums of the user with usage of the API of the Photobank.
+
+You can choose any Photobank from the list:  
+- Flickr
+- Facebook
+- Picasa
+
+ 1) User sign on to the Photobank
+
+ 2) Show the list of user's albums
+
+ 3) Show the content of the chosen album
+
+ 4) Show tooltip on the mouse over event for the chosen photo
+
+ 5) Create database and save all user activity into it.
+
+ 6) Create standalone web page where all user activity will be showing.
+
+ Please use these technologies: 
+
+Frontend:
+HTML5, CSS3, Bootstrap, Javascript, JQuery (or any other Javascript frameworks).
+
+Backend:
+node.js or PHP
+
+ Please make a free account on http://heroku.com and deploy the test task there.
+
+ The deliverable should be a public github repository with source code and the URL to the app hosted on the cloud.

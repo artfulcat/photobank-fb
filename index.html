@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Facebook Login JavaScript Example</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="src/images/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="src/images/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="src/images/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="src/images/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="src/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/libs/animate/animate.css">
+
+    <!--<link rel="stylesheet" href="src/css/bootstrap-skin.css">-->
+	
+	<link rel="stylesheet" href="src/css/fonts.css">
+	<link rel="stylesheet" href="src/css/main.css">
+	<link rel="stylesheet" href="src/css/media.css">
+
+	<script src="src/libs/modernizr/modernizr.js"></script>
+
+</head>
+
+<body>
+<script>
+    // стандартный скрипт инициализации FB JS SDK
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '388045901389767', //my appID ("photobank")
+            cookie     : true,  // enable cookies to allow the server to access
+                                // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.4' // use version 2.4
+        });
+
+        $(document).trigger('fbload'); // событие конца загрузки АПИ
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+    <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>-->
+
+<header>
+    <div class="row text-center">
+        <h1>Facebook Photobank</h1>
+        <h4 id="status"></h4>
+        <button id="login-button" class="btn btn-default" type="button">Login</button>
+        <hr>
+    </div>
+</header>
+
+<section class="container-fluid">
+
+    <div class="row text-center">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <div id="albums" class="hidden"></div>
+        </div>
+        <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
+            <div id="photos" class="hidden"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</section>
+
+<footer>
+    <div class="row text-center">
+        <p>(с) 2015 All rights reserved</p>
+    </div>
+</footer>
+
+
+
+
+
+	<div class="hidden"></div>
+
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div>
+
+	<!--[if lt IE 9]>
+	<script src="src/libs/html5shiv/es5-shim.min.js"></script>
+	<script src="src/libs/html5shiv/html5shiv.min.js"></script>
+	<script src="src/libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="src/libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<!--<script src="src/libs/jquery/jquery-1.11.2.min.js"></script>-->
+    <script src="src/libs/jquery/jquery-2.1.4.min.js"></script>
+    <script src="src/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="src/libs/waypoints/waypoints.min.js"></script>
+    <script src="src/libs/animate/animate-css.js"></script>
+    <script src="src/libs/plugins-scroll/plugins-scroll.js"></script>
+
+    <script src="src/js/photobank.js"></script>
+    <script src="src/js/common.js"></script>
+
+</body>
+</html>
