@@ -4,17 +4,9 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
 
-<!--[if gte IE 9]>
-<style type="text/css">
-    .gradient {
-        filter: none;
-    }
-</style>
-<![endif]-->
-
 <head>
 	<meta charset="utf-8">
-	<title>Facebook Photobank</title>
+	<title>Facebook Photobank: Actions of users</title>
 	<meta name="description" content="">
 
 	<link rel="shortcut icon" href="src/images/favicon/favicon.ico" type="image/x-icon">
@@ -39,56 +31,56 @@
 </head>
 
 <body>
-<script>
-    // стандартный скрипт инициализации FB JS SDK
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '388045901389767', //my appID ("photobank")
-            cookie     : true,  // enable cookies to allow the server to access
-                                // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.4' // use version 2.4
-        });
-
-        $(document).trigger('fbload'); // событие конца загрузки АПИ
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-    <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>-->
 
 <header>
     <div class="row text-center">
-        <h1 class="logo">Facebook Photobank</h1>
-        <h4 id="status"></h4>
-        <button id="login-button" class="btn btn-default" type="button">Login</button>
+        <h1 class="logo">Facebook Photobank: Actions of users</h1>
+        <h4>Table of user actions</h4>
     </div>
 </header>
 
 <section class="container-fluid">
 
     <div class="row text-center">
-        <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
-            <div id="albums" class="hidden"></div>
-        </div>
-        <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12">
-            <div id="photos" class="hidden"></div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <?php
+                // Конектимся к нашей БД
+                $link = mysql_connect("localhost", "root", "") or die("Could not connect : " . mysql_error());
+
+                if( !mysql_select_db("tracker") ) {
+                    // если БД нет, сообщим об этом
+                    die("Could not select database");
+                } else {
+                    // выполняем SQL-запрос
+                    $query = "SELECT * FROM events";
+                    $result = mysql_query($query) or die("Query failed : " . mysql_error());
+
+                    // Выводим результаты в html
+
+                        print '<div id = "events" class="panel panel-primary">';
+                        print '<div class="panel-heading">Events</div>';
+                        print '<table class="table">';
+                        print '<thead><tr>';
+                        print '<th>Event ID</th> <th>User ID</th> <th>User Name</th> <th>Event Type</th> <th>Event Element</th> <th>Event Element ID</th> <th>Event Time</th>';
+                        print '</tr></thead>';
+                        while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                            print '<tr>';
+                            foreach ($line as $col_value) {
+                            print "<td>$col_value</td>";
+                            }
+                            print "</tr>";
+                        }
+                        print '</table>';
+                        print '</div>';
+
+                    // Освобождаем память от результата
+                    mysql_free_result($result);
+
+                }
+                mysql_close($link);
+            ?>
         </div>
     </div>
-
-
-
-
-
-
 
 </section>
 

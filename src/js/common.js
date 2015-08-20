@@ -18,9 +18,8 @@ $(document).ready(function() {
                 }
             });
 
-            photobank.checkLoginStatus();
+            photobank.login();
             photobank.getAlbums();
-
         });
 
 

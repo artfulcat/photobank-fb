@@ -60,10 +60,20 @@ body {
 	line-height: 1.6;
 	font-family: "RobotoRegular", sans-serif;
 	overflow-x: hidden;
+    overflow-y: scroll;
+    background: url("../images/photographer.jpg") no-repeat 60% 30px #ffffff;
+    background-size: contain;
 }
 
 .hidden {
 	display: none;
+}
+
+header {
+    margin-bottom: 20px;
+    background-color: rgba(58, 87, 149, 0.75);
+
+
 }
 
 footer {
@@ -76,7 +86,11 @@ footer {
 }
 
 #login-button {
-    /*margin: 20px;*/
+    margin: 0 0 10px;
+}
+
+#albums ul {
+    margin-bottom: 0;
 }
 
 #albums li {
@@ -84,21 +98,64 @@ footer {
 }
 
 #albums li:not(.active):hover {
-    background-color: #72cfff;
+    /*background-color: #72cfff;*/
+    background-color: rgba(58, 87, 149, 0.75);
+}
+
+#albums .list-group-item.active,
+#albums .list-group-item.active:focus,
+#albums .list-group-item.active:hover {
+    background-color: rgba(58, 87, 149, 0.75);
 }
 
 #photos {
+    width: 100%;
+}
+
+#photos,
+#albums,
+#albums .list-group-item:not(.active),
+#events {
     /*border: 1px solid #ddd;*/
     /*border-radius: 4px;*/
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#events:hover {
+    background-color: rgba(255, 255, 255, 1.0);
+}
+
+#photos:hover,
+#events tr:hover {
+    /*background-color: rgba(255, 255, 255, 1.0);*/
+    background-color: rgba(58, 87, 149, 0.75);
+}
+
+#events th {
+    text-align: center;
 }
 
 #photos .thumbnail {
     display: inline-block;
-    width: 200px;
+    width: 250px;
     height: auto;
     margin: 10px;
 }
 
+#photos .thumbnail img {
+    border: 1px solid #ddd;
+}
+
 #tooltip {
     border: 1px solid #337ab7;
+}
+
+h1.logo {
+    margin: 0 auto;
+    padding: 20px 0 0;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: rgba(58, 87, 149, 0.9);
+    border-bottom: 1px solid #ffffff;
 }
