@@ -1,3 +1,4 @@
+/* Main Font */
 @font-face {
 	font-family: "RobotoRegular";
 	src: url("../fonts/RobotoRegular/RobotoRegular.eot");
@@ -8,4 +9,5 @@
 	font-weight: normal;
 }
 
+/* H1 Title Font */
 @import url(http://fonts.googleapis.com/css?family=Ropa+Sans);

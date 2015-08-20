@@ -1,8 +1,8 @@
 /**
- * Created by User on 15.08.2015.
+ * FB Photobank
  */
 
-function Photobank(loginID, albumsID, photosID) {
+function Photobank(loginID, statusID, albumsID, photosID) {
     var loginResponse = null;
     var accessToken = '';
 
@@ -12,13 +12,18 @@ function Photobank(loginID, albumsID, photosID) {
     };
 
     var albums = [];
-    var albumsInMenu = 3;
-    var albumsCurrent = 0;
 
+    // обработчик логина и скачаных альбомов
     var logined = $.Deferred();
     var downloaded = []; // of $.Deferred();
 
-    //
+
+    /**
+     * Функция возвращающая URL фотографии ФБ
+     * @param id - идентификатор фотографии
+     * @returns {string} - адрес фотографии
+     * -----------------------------------------------------------------------------------------------------------------
+     */
     function makeFacebookPhotoURL( id ) {
         return 'https://graph.facebook.com/' + id + '/picture?access_token=' + accessToken;
     }
@@ -26,6 +31,7 @@ function Photobank(loginID, albumsID, photosID) {
 
     /**
      * Функция проверки лолгин-статуса и вывода его
+     * -----------------------------------------------------------------------------------------------------------------
      */
     function checkLoginStatus() {
         FB.getLoginStatus(function(response) {
@@ -36,50 +42,43 @@ function Photobank(loginID, albumsID, photosID) {
                 console.log('Welcome!  Fetching your information.... ');
                 userFB.id = response.authResponse.userID;
                 accessToken = response.authResponse.accessToken || '';
-                // мы залогинились, обработаем это
+                // Мы залогинились, обработаем это
                 logined.resolve();
-                //
                 $(loginID).addClass("logined").text("Logout").toggleClass('btn-warning', true);
-                //
                 FB.api('/me', function(response) {
                     userFB.name = response.name;
-                    console.log('Successful login for: ' + response.name);
-                    document.getElementById('status').innerHTML =
-                        'Thanks for logging in, ' + response.name + '!';
+                    $(statusID).html('Thanks for logging in, ' + response.name + '!');
                 });
             } else {
                 // Нет конекта:
                 logined = $.Deferred(); // сброс состояния конекта
                 $(loginID).removeClass('logined btn-warning').text("Login").toggleClass('btn-success',true);
                 if (response.status === 'not_authorized') {
-                    // The person is logged into Facebook, but not your app.
-                    document.getElementById('status').innerHTML = 'Please log ' +
-                    'into this app';
+                    $(statusID).html('Please log into this app');
                 } else {
-                    // The person is not logged into Facebook, so we're not sure if
-                    // they are logged into this app or not.
-                    document.getElementById('status').innerHTML = 'Please log ' +
-                    'into Facebook';
+                    $(statusID).html('Please log into Facebook');
                 }
             }
         });
-
-
     }
 
-    // разлогиниться
+
+    /**
+     * Разлогиниться
+     * -----------------------------------------------------------------------------------------------------------------
+     */
     this.logout = function() {
         FB.logout(function(response) {
                 // мы разлогинились, обработаем это
                 checkLoginStatus();
-
-                //logined = $.Deferred();
-                //loginResponse = null;
-                //$(loginID).toggleClass('logined').text("Login").toggleClass('btn-success btn-warning');
         });
     }
 
-    // залогиниться
+
+    /**
+     * Залогиниться
+     * -----------------------------------------------------------------------------------------------------------------
+     */
     this.login = function() {
         if(!loginResponse) {
             // мы еще не логинились, проверим может мы в конекте
@@ -97,7 +96,10 @@ function Photobank(loginID, albumsID, photosID) {
     }
 
 
-    // получить список альбомов пользователя
+    /**
+     * Получить список альбомов пользователя и вывести их после загрузки
+     * -----------------------------------------------------------------------------------------------------------------
+     */
     this.getAlbums = function() {
         // когда мы уже залогинимся, нужно запросить фотоальбомы
         logined.done( function() {
@@ -106,15 +108,10 @@ function Photobank(loginID, albumsID, photosID) {
                 //{fields: 'id,cover_photo'},
                 function(albumResponse) {
                     if (albumResponse && !albumResponse.error) {
-                        //console.log( ' got albums ' );
-                        albums = albumResponse.data;//.slice(0);
-                        console.log("albums:");
-                        console.log(albums);
+                        albums = albumResponse.data;
                         getPhotos();
-                        console.log("albums with photos:");
-                        console.log(albums);
                     } else {
-                        alert("Ошибка получения альбомов пользователя!");
+                        alert("Error retrieving user albums!");
                     }
                 });
             }
@@ -122,21 +119,36 @@ function Photobank(loginID, albumsID, photosID) {
     }
 
 
+    /**
+     * Получить фото с каждого альбома
+     * -----------------------------------------------------------------------------------------------------------------
+     */
+    function getPhotos() {
+        for (var j = 0; j < albums.length; j++) {
+            albums[j].photos = [];
+            console.log(albums[j].name);
+            getPhotosForAlbum(j);
+        }
+        // Обработчик загрузки всех фото: вывести их
+        $.when.apply($, downloaded ).then( function() { outputAlbums(); } );
+    }
+
+
+    /**
+     * Получить фото с альбома
+     * @param key - индекс в массиве альбомов
+     * -----------------------------------------------------------------------------------------------------------------
+     */
     function getPhotosForAlbum(key) {
         downloaded[key] = $.Deferred();
         FB.api(
             '/' + albums[key].id + '/photos',
             //{fields: 'id'},
             function (albumPhotosResponse) {
-                console.log("albumPhotosResponse:")
-                console.log(albumPhotosResponse);
                 if (albumPhotosResponse && !albumPhotosResponse.error) {
-                    //console.log( ' got photos for album ' + albumId );
                     var facebookPhoto;
                     for (var i = 0; i < albumPhotosResponse.data.length; i++) {
                         facebookPhoto = albumPhotosResponse.data[i];
-                        //console.log("facebookPhoto:");
-                        //console.log(facebookPhoto);
                         albums[key].photos.push({
                             'id': facebookPhoto.id,
                             'name': facebookPhoto.name,
@@ -144,7 +156,7 @@ function Photobank(loginID, albumsID, photosID) {
                             'url': makeFacebookPhotoURL(facebookPhoto.id)
                         });
                     }
-                    // если мы обработали последний альбом, можно выводить содержимое
+                    // отметим альбом загруженным
                     downloaded[key].resolve();
                 }
             }
@@ -152,36 +164,23 @@ function Photobank(loginID, albumsID, photosID) {
     }
 
 
-    function getPhotos() {
-        for (var j = 0; j < albums.length; j++) {
-            albums[j].photos = [];
-            console.log(albums[j].name);
-            getPhotosForAlbum(j);
-        }
-        //
-        $.when.apply($, downloaded ).then( function() { outputAlbums(); } );
-    }
-
     /**
-     * Создание и вывод альбомов и их содержимого
+     * Создание и вывод HTML-кода альбомов и их содержимого
      * -----------------------------------------------------------------------------------------------------------------
      */
     function outputAlbums() {
         // вывод списка альбомов
         var html = '';
+        var cls = 'list-group-item';
         html += '<div id="albums" class="panel panel-primary"><div class="panel-heading">Your Albums</div><div class="panel-body">';
         html += '<ul class="list-group">';
         for (var i = 0; i < albums.length; i++) {
-            html += '<li id="' + albums[i].id + '" class="list-group-item"><span class="badge">' + albums[i].photos.length + '</span>' + albums[i].name + '</li>';
+            if(albums[i].name == 'Profile Pictures') cls = 'list-group-item active';  else cls = 'list-group-item';
+            html += '<li id="' + albums[i].id + '" class="' + cls + '"><span class="badge">' + albums[i].photos.length + '</span>' + albums[i].name + '</li>';
         }
         html += '</ul>';
         html += '</div></div></div>';
         $(albumsID).replaceWith(html);
-
-        // при скроле убирать подсказку
-        $(window).scroll( function(){
-            $('#tooltip').css('display','none');
-        });
 
         // КЛИК на альбоме: вывод содержимого альбома по клику----------------------------------------------------------
         $(albumsID+' li').click( function() {
@@ -215,20 +214,9 @@ function Photobank(loginID, albumsID, photosID) {
                 $(photosID +' div.panel-heading').text(albumName);
                 $(photosID).hide().fadeIn(2000);
 
-                // Подсказка: Показать при заходе мыши
+                // ПОДСКАЗКА: Показать при заходе мыши -----------------------------------------------------------------
                 $(photosID).on('mouseenter', '.thumbnail img', function(e){
-                    // ОТПРАВИМ НА ТРЕКЕР СОБЫТИЕ: отслеживание действий пользователей
-                    $.post( "tracker.php",
-                        {   user_id: userFB.id,
-                            user_name: userFB.name,
-                            event_type: e.type,
-                            event_element: 'image',
-                            event_element_id: $(this).attr('id'),
-                            event_time: Math.round(e.timeStamp/1000)
-                        },
-                        function(data){  alert("Полученные данные: " + data);  }
-                    );
-                    //
+                    // Создать
                     if( !$('#tooltip').length ) {
                         var tooltipStr = $(this).attr('alt');
                         var $tooltip = $('<div/>', {
@@ -271,6 +259,11 @@ function Photobank(loginID, albumsID, photosID) {
                         $tooltip.offset( {top: e.pageY+25, left: e.pageX} );
                     }
                 } );
+
+                // При скроле убирать подсказку
+                $(window).scroll( function(){
+                    $('#tooltip').css('display','none');
+                });
 
                 // ВСПЛЫВАЮЩАЯ КАРТИНКА: после клика по миниатюре ------------------------------------------------------
                 $(photosID).on('click', '.thumbnail img', function(e) {
@@ -321,37 +314,54 @@ function Photobank(loginID, albumsID, photosID) {
                     var $img = $('<img/>', {
                         id: '',
                         src: $(this).attr('src'),
-                        alt: '',
+                        alt: $(this).attr('alt'),
                         css: {
                             display: 'inline-block',
                             zIndex: '1002',
-                            //position: 'relative',
-                            //top: '0px',
-                            //left: '0px',
                             width: 'auto',
-                            //height: 'auto',
                             maxHeight: Math.ceil(document.documentElement.clientHeight*0.8),
                             maxWidth: Math.ceil(document.documentElement.clientWidth*0.8),
-                            //height: Math.ceil(document.documentElement.clientHeight*0.8),
                             margin: 'auto',
                             padding: '0px',
                             backgroundColor: 'rgba(255, 255, 255, 1.0)',
                             border: '1px solid rgba(0, 0, 0, 1.0)'
                         }
                     }).appendTo($imgFrame);
+                    $('body').after($bigPhoto);
 
                     // По клику удалять
                     $bigPhoto.on('click', function() {
                         $(this).remove();
                     });
+
                     // По ресайзу окна удалять
                     $(window).on('resize', function() {
                         $('#big-photo').remove();
                     });
-                    $('body').after($bigPhoto);
                 });
             }
         });
+
+        // СЛЕЖЕНИЕ: отслеживание действий пользователей----------------------------------------------------------------
+        // Альбомы и миниатюры
+        $('body').on('mouseenter click', albumsID + ' .list-group-item, '+ photosID + ' .thumbnail img', function(e) {
+            var elem = 'image';
+            if( $(this).hasClass('list-group-item') ) elem = 'album';
+            $.post("tracker.php",
+                {
+                    user_id: userFB.id,
+                    user_name: userFB.name,
+                    event_type: e.type,
+                    event_element: elem,
+                    event_element_id: $(this).attr('id'),
+                    event_time: Math.round(e.timeStamp / 1000)
+                },
+                function (data) { /* alert("Полученные данные: " + data); */ }
+            );
+        });
+
+        // "кликнем" по первом альбому
+        $(albumsID+' .active').removeClass('active').trigger('click');
     }
 
 

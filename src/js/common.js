@@ -6,9 +6,9 @@ $(document).ready(function() {
     $(document).on(
         'fbload',
         function() {
-            photobank = new Photobank("#login-button", "#albums", "#photos");
+            photobank = new Photobank('#login-button', '#status', '#albums', '#photos');
 
-            $("#login-button").click( function(){
+            $('#login-button').click( function(){
                 if( $(this).hasClass('logined') ) {
                     photobank.logout();
                     photobank.clearHTML();
@@ -23,6 +23,11 @@ $(document).ready(function() {
         });
 
 
+
+
+    //------------------------------------------------------------------------------------------------------------------
+    // ДАЛЕЕ стандартный шаблон:
+    //------------------------------------------------------------------------------------------------------------------
 
 
 	//Цели для Яндекс.Метрики и Google Analytics

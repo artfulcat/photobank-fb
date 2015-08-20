@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: User
- * Date: 19.08.2015
- * Time: 15:36
+ *
  */
 
     // Конектимся к нашей БД
@@ -23,16 +20,12 @@
                 EventTime TIMESTAMP
             )") or die(mysql_error());
         echo 'CREATE DATABASE tracker';
-    } else {
-        //
-        // echo 'БД выбрана';
-        // echo $_POST['event_time'];
     }
 
     // у нас есть БД 'tracker' и таблица 'events': сохраним полученные данные
     $time = date("Y-m-d H:i:s" , $_POST['event_time']); // секунды в строку времени SQL
     $strSQL = "INSERT INTO events (UserId, UserName, EventType, EventElement, EventElementId, EventTime) VALUES ('"
-        .$_POST['user_id'] ."','"
+        .$_POST['user_id']."','"
         .$_POST['user_name']."','"
         .$_POST['event_type']."','"
         .$_POST['event_element']."','"

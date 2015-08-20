@@ -55,27 +55,25 @@
                     $query = "SELECT * FROM events";
                     $result = mysql_query($query) or die("Query failed : " . mysql_error());
 
-                    // Выводим результаты в html
-
-                        print '<div id = "events" class="panel panel-primary">';
-                        print '<div class="panel-heading">Events</div>';
-                        print '<table class="table">';
-                        print '<thead><tr>';
-                        print '<th>Event ID</th> <th>User ID</th> <th>User Name</th> <th>Event Type</th> <th>Event Element</th> <th>Event Element ID</th> <th>Event Time</th>';
-                        print '</tr></thead>';
-                        while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
-                            print '<tr>';
-                            foreach ($line as $col_value) {
-                            print "<td>$col_value</td>";
-                            }
-                            print "</tr>";
+                    // выводим результаты в html
+                    print '<div id = "events" class="panel panel-primary">';
+                    print '<div class="panel-heading">Events</div>';
+                    print '<table class="table">';
+                    print '<thead><tr>';
+                    print '<th>Event ID</th> <th>User ID</th> <th>User Name</th> <th>Event Type</th> <th>Event Element</th> <th>Event Element ID</th> <th>Event Time</th>';
+                    print '</tr></thead>';
+                    while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+                        print '<tr>';
+                        foreach ($line as $col_value) {
+                        print "<td>$col_value</td>";
                         }
-                        print '</table>';
-                        print '</div>';
+                        print "</tr>";
+                    }
+                    print '</table>';
+                    print '</div>';
 
-                    // Освобождаем память от результата
+                    // освобождаем память от результата
                     mysql_free_result($result);
-
                 }
                 mysql_close($link);
             ?>
