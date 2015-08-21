@@ -45,9 +45,9 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <?php
                 // Конектимся к нашей БД
-                $link = mysql_connect("localhost", "root", "") or die("Could not connect : " . mysql_error());
+                $link = mysql_connect("localhost", "testuser", "welcome") or die("Could not connect : " . mysql_error());
 
-                if( !mysql_select_db("tracker") ) {
+                if( !mysql_select_db('tracker', $link) ) {
                     // если БД нет, сообщим об этом
                     die("Could not select database");
                 } else {

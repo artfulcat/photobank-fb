@@ -178,6 +178,7 @@ function Photobank(loginID, statusID, albumsID, photosID) {
             if(albums[i].name == 'Profile Pictures') cls = 'list-group-item active';  else cls = 'list-group-item';
             html += '<li id="' + albums[i].id + '" class="' + cls + '"><span class="badge">' + albums[i].photos.length + '</span>' + albums[i].name + '</li>';
         }
+        if(!albums.length) html += '<div class="alert alert-danger" role="alert">There are no albums...</div>'; // если альбомов нет
         html += '</ul>';
         html += '</div></div></div>';
         $(albumsID).replaceWith(html);

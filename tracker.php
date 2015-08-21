@@ -4,8 +4,10 @@
  */
 
     // Конектимся к нашей БД
-    $link = mysql_connect("localhost", "root", "") or die("Could not connect : " . mysql_error());
+    $link = mysql_connect("localhost", "testuser", "welcome") or die("Could not connect : " . mysql_error());
 
+
+    /* Программное создание БД
     if( !mysql_select_db("tracker") ) {
         // если БД нет, создадим ее и таблицу в ней
         mysql_query("CREATE DATABASE tracker") or die(mysql_error());
@@ -20,9 +22,18 @@
                 EventTime TIMESTAMP
             )") or die(mysql_error());
         echo 'CREATE DATABASE tracker';
+    } */
+
+    mysql_select_db('tracker', $link) or die (mysql_error());
+
+    // Очистка таблицы при более 100 записей
+    $rows = mysql_query('SELECT * FROM events', $link);
+    $num_rows = mysql_num_rows( $rows );
+    if($num_rows > 100) {
+        mysql_query('TRUNCATE TABLE events', $link);
     }
 
-    // у нас есть БД 'tracker' и таблица 'events': сохраним полученные данные
+    // Есть БД 'tracker' и таблица 'events': сохраним полученные данные
     $time = date("Y-m-d H:i:s" , $_POST['event_time']); // секунды в строку времени SQL
     $strSQL = "INSERT INTO events (UserId, UserName, EventType, EventElement, EventElementId, EventTime) VALUES ('"
         .$_POST['user_id']."','"
@@ -31,7 +42,7 @@
         .$_POST['event_element']."','"
         .$_POST['event_element_id']."','"
         .$time."')";
-    mysql_query($strSQL) or die(mysql_error());
+    mysql_query($strSQL, $link) or die(mysql_error());
 
 
 

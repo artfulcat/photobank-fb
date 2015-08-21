@@ -31,7 +31,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="13.730769" vertical-offset="969" max-vertical-offset="1989">
+            <state vertical-scroll-proportion="7.8461537" vertical-offset="816" max-vertical-offset="1989">
               <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
               <folding />
             </state>
@@ -41,12 +41,21 @@
       <file leaf-file-name="viewer.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/viewer.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="13.730769" vertical-offset="663" max-vertical-offset="2108">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="-21.576923" vertical-offset="306" max-vertical-offset="2108">
+              <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
               <folding>
-                <marker date="1440098705592" expanded="true" signature="2063:2083" placeholder="SELECT * FRO..events..." />
-                <marker date="1440098705592" expanded="true" signature="2794:2797" placeholder="..." />
-                <marker date="1440098705592" expanded="true" signature="2795:2797" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="2081:2101" placeholder="SELECT * FRO..events..." />
+                <marker date="1440111913395" expanded="true" signature="2477:2696" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="2481:2688" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="2812:2815" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="2812:2901" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="2813:2815" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="3306:3322" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="3306:3405" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="3340:3395" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="3461:3504" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="3512:3536" placeholder="..." />
+                <marker date="1440111913395" expanded="true" signature="3512:3785" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -65,40 +74,43 @@
       <file leaf-file-name="photobank.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/photobank.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4533" max-vertical-offset="5287">
-              <caret line="347" column="31" selection-start-line="347" selection-start-column="31" selection-end-line="347" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2756" max-vertical-offset="3859">
+              <caret line="180" column="132" selection-start-line="180" selection-start-column="132" selection-end-line="180" selection-end-column="132" />
               <folding>
-                <element signature="e#10964#14296#0" expanded="false" />
+                <element signature="e#7106#14455#0" expanded="false" />
+                <element signature="e#11097#14429#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tracker.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tracker.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tracker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22160149" vertical-offset="0" max-vertical-offset="731">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="918">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#6#16#0#PHP" expanded="true" />
-                <marker date="1440109470550" expanded="true" signature="388:688" placeholder="CREATE TABLE..events..." />
-                <marker date="1440109470550" expanded="true" signature="942:1040" placeholder="INSERT INTO ..." />
-                <marker date="1440109470550" expanded="true" signature="942:1041" placeholder="INSERT INTO ..." />
-                <marker date="1440109470550" expanded="true" signature="942:1072" placeholder="INSERT INTO ..." />
-                <marker date="1440109470550" expanded="true" signature="942:1074" placeholder="INSERT INTO ..." />
-                <marker date="1440109470550" expanded="true" signature="942:1109" placeholder="INSERT INTO ..." />
-                <marker date="1440109470550" expanded="true" signature="942:1145" placeholder="INSERT INTO ..." />
-                <marker date="1440109470550" expanded="true" signature="942:1246" placeholder="INSERT INTO ..." />
+                <marker date="1440110450989" expanded="true" signature="431:731" placeholder="CREATE TABLE..events..." />
+                <marker date="1440110450989" expanded="true" signature="940:960" placeholder="SELECT * FRO..events..." />
+                <marker date="1440110450989" expanded="true" signature="940:969" placeholder="SELECT * FRO..events..." />
+                <marker date="1440110450989" expanded="true" signature="1273:1371" placeholder="INSERT INTO ..." />
+                <marker date="1440110450989" expanded="true" signature="1273:1372" placeholder="INSERT INTO ..." />
+                <marker date="1440110450989" expanded="true" signature="1273:1403" placeholder="INSERT INTO ..." />
+                <marker date="1440110450989" expanded="true" signature="1273:1405" placeholder="INSERT INTO ..." />
+                <marker date="1440110450989" expanded="true" signature="1273:1440" placeholder="INSERT INTO ..." />
+                <marker date="1440110450989" expanded="true" signature="1273:1476" placeholder="INSERT INTO ..." />
+                <marker date="1440110450989" expanded="true" signature="1273:1577" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="2771">
-              <caret line="99" column="31" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.3623446" vertical-offset="1360" max-vertical-offset="2771">
+              <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -138,12 +150,12 @@
         <option value="$PROJECT_DIR$/viewer.html" />
         <option value="$PROJECT_DIR$/src/css/media.css" />
         <option value="$PROJECT_DIR$/src/css/fonts.css" />
-        <option value="$PROJECT_DIR$/viewer.phtml" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/js/common.js" />
-        <option value="$PROJECT_DIR$/src/css/main.css" />
-        <option value="$PROJECT_DIR$/src/js/photobank.js" />
         <option value="$PROJECT_DIR$/tracker.php" />
+        <option value="$PROJECT_DIR$/viewer.phtml" />
+        <option value="$PROJECT_DIR$/src/js/photobank.js" />
+        <option value="$PROJECT_DIR$/src/css/main.css" />
       </list>
     </option>
   </component>
@@ -337,7 +349,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -403,9 +415,18 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1440098705592" expanded="true" signature="2063:2083" placeholder="SELECT * FRO..events..." />
-            <marker date="1440098705592" expanded="true" signature="2794:2797" placeholder="..." />
-            <marker date="1440098705592" expanded="true" signature="2795:2797" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2081:2101" placeholder="SELECT * FRO..events..." />
+            <marker date="1440111913395" expanded="true" signature="2477:2696" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2481:2688" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2812:2815" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2812:2901" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2813:2815" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3306:3322" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3306:3405" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3340:3395" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3461:3504" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3512:3536" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3512:3785" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -423,7 +444,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3519" max-vertical-offset="6307">
           <caret line="228" column="9" selection-start-line="228" selection-start-column="9" selection-end-line="228" selection-end-column="9" />
           <folding>
-            <element signature="e#10964#14296#0" expanded="false" />
+            <element signature="e#7106#14455#0" expanded="false" />
+            <element signature="e#11097#14429#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -434,14 +456,16 @@
           <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
           <folding>
             <element signature="e#6#16#0#PHP" expanded="true" />
-            <marker date="1440109470550" expanded="true" signature="388:688" placeholder="CREATE TABLE..events..." />
-            <marker date="1440109470550" expanded="true" signature="942:1040" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1041" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1072" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1074" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1109" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1145" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1246" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="431:731" placeholder="CREATE TABLE..events..." />
+            <marker date="1440110450989" expanded="true" signature="940:960" placeholder="SELECT * FRO..events..." />
+            <marker date="1440110450989" expanded="true" signature="940:969" placeholder="SELECT * FRO..events..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1371" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1372" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1403" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1405" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1440" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1476" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1577" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -499,7 +523,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5423">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10964#14296#0" expanded="false" />
+            <element signature="e#7106#14455#0" expanded="false" />
+            <element signature="e#11097#14429#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -510,14 +535,16 @@
           <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
           <folding>
             <element signature="e#6#16#0#PHP" expanded="true" />
-            <marker date="1440109470550" expanded="true" signature="388:688" placeholder="CREATE TABLE..events..." />
-            <marker date="1440109470550" expanded="true" signature="942:1040" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1041" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1072" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1074" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1109" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1145" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1246" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="431:731" placeholder="CREATE TABLE..events..." />
+            <marker date="1440110450989" expanded="true" signature="940:960" placeholder="SELECT * FRO..events..." />
+            <marker date="1440110450989" expanded="true" signature="940:969" placeholder="SELECT * FRO..events..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1371" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1372" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1403" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1405" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1440" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1476" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1577" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -575,7 +602,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4607">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10964#14296#0" expanded="false" />
+            <element signature="e#7106#14455#0" expanded="false" />
+            <element signature="e#11097#14429#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -586,14 +614,16 @@
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="e#6#16#0#PHP" expanded="true" />
-            <marker date="1440109470550" expanded="true" signature="388:688" placeholder="CREATE TABLE..events..." />
-            <marker date="1440109470550" expanded="true" signature="942:1040" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1041" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1072" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1074" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1109" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1145" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1246" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="431:731" placeholder="CREATE TABLE..events..." />
+            <marker date="1440110450989" expanded="true" signature="940:960" placeholder="SELECT * FRO..events..." />
+            <marker date="1440110450989" expanded="true" signature="940:969" placeholder="SELECT * FRO..events..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1371" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1372" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1403" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1405" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1440" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1476" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1577" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -643,7 +673,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4335">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10964#14296#0" expanded="false" />
+            <element signature="e#7106#14455#0" expanded="false" />
+            <element signature="e#11097#14429#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -693,7 +724,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#10964#14296#0" expanded="false" />
+            <element signature="e#7106#14455#0" expanded="false" />
+            <element signature="e#11097#14429#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -722,14 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="2771">
-          <caret line="99" column="31" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
@@ -738,9 +762,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tracker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="918">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#16#0#PHP" expanded="true" />
+            <marker date="1440110450989" expanded="true" signature="431:731" placeholder="CREATE TABLE..events..." />
+            <marker date="1440110450989" expanded="true" signature="940:960" placeholder="SELECT * FRO..events..." />
+            <marker date="1440110450989" expanded="true" signature="940:969" placeholder="SELECT * FRO..events..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1371" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1372" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1403" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1405" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1440" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1476" placeholder="INSERT INTO ..." />
+            <marker date="1440110450989" expanded="true" signature="1273:1577" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="13.730769" vertical-offset="969" max-vertical-offset="1989">
+        <state vertical-scroll-proportion="7.8461537" vertical-offset="816" max-vertical-offset="1989">
           <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding />
         </state>
@@ -748,41 +792,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/viewer.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="13.730769" vertical-offset="663" max-vertical-offset="2108">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="-21.576923" vertical-offset="306" max-vertical-offset="2108">
+          <caret line="51" column="53" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="53" />
           <folding>
-            <marker date="1440098705592" expanded="true" signature="2063:2083" placeholder="SELECT * FRO..events..." />
-            <marker date="1440098705592" expanded="true" signature="2794:2797" placeholder="..." />
-            <marker date="1440098705592" expanded="true" signature="2795:2797" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2081:2101" placeholder="SELECT * FRO..events..." />
+            <marker date="1440111913395" expanded="true" signature="2477:2696" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2481:2688" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2812:2815" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2812:2901" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="2813:2815" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3306:3322" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3306:3405" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3340:3395" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3461:3504" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3512:3536" placeholder="..." />
+            <marker date="1440111913395" expanded="true" signature="3512:3785" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/photobank.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4533" max-vertical-offset="5287">
-          <caret line="347" column="31" selection-start-line="347" selection-start-column="31" selection-end-line="347" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2756" max-vertical-offset="3859">
+          <caret line="180" column="132" selection-start-line="180" selection-start-column="132" selection-end-line="180" selection-end-column="132" />
           <folding>
-            <element signature="e#10964#14296#0" expanded="false" />
+            <element signature="e#7106#14455#0" expanded="false" />
+            <element signature="e#11097#14429#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tracker.php">
+    <entry file="file://$PROJECT_DIR$/src/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22160149" vertical-offset="0" max-vertical-offset="731">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#16#0#PHP" expanded="true" />
-            <marker date="1440109470550" expanded="true" signature="388:688" placeholder="CREATE TABLE..events..." />
-            <marker date="1440109470550" expanded="true" signature="942:1040" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1041" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1072" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1074" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1109" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1145" placeholder="INSERT INTO ..." />
-            <marker date="1440109470550" expanded="true" signature="942:1246" placeholder="INSERT INTO ..." />
-          </folding>
+        <state vertical-scroll-proportion="0.3623446" vertical-offset="1360" max-vertical-offset="2771">
+          <caret line="92" column="15" selection-start-line="92" selection-start-column="15" selection-end-line="92" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

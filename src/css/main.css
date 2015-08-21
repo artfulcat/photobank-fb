@@ -89,7 +89,8 @@ footer {
     margin: 0 0 10px;
 }
 
-#albums ul {
+#albums ul,
+#albums .alert {
     margin-bottom: 0;
 }
 
@@ -115,7 +116,6 @@ footer {
 #albums,
 #albums .list-group-item:not(.active),
 #events {
-
     background-color: rgba(255, 255, 255, 0.5);
 }
 
