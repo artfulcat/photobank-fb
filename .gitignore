@@ -1,7 +1,7 @@
 # IDE #
 ###################
-/.idea
-/.idea/*
+.idea
+.idea/*
 
 # Compiled source #
 ###################
